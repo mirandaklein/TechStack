@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { View,Text } from 'react-native';
 import CardItem from './CardItem.js';
 
 class ListItem extends Component {
     render() {  
+        const { titleStyle } = styles;
+
         return(
-            <CardItem>
-                <Text>
+            <View>
+                <CardItem>
+                    <Text style={titleStyle}>
                     {this.props.library.title}
-                </Text>
-            </CardItem>
+                    </Text>
+                </CardItem>
+            </View>
         )
+    }
+}
+
+const styles= {
+    titleStyle: {
+        fontSize: 18,
+        paddingLeft: 15
     }
 }
 
