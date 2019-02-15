@@ -15,6 +15,11 @@ class ListItem extends Component {
                     {this.props.library.title}
                     </Text>
                 </CardItem>
+                <CardItem>
+                    <Text style={titleStyle}>
+                    {this.props.library.description}
+                    </Text>
+                </CardItem>
             </View>
         )
     }
