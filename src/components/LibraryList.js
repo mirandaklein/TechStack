@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class LibraryList extends Comonent {
-    render (){
+class LibraryList extends Component {
+    render () {
+        console.log(this.props);
         return;
     }
 }
 
-export default LibraryList;
+const mapStateToProps= state => {
+    return {
+        libraries: state.libraries
+    };
+};
+
+export default connect(mapStateToProps)(LibraryList);
